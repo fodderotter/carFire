@@ -1,0 +1,19 @@
+<form ng-submit="addCar(newCar)">
+	<input type="text" ng-model="newCar.make" placeholder="Make">
+	<input type="text" ng-model="newCar.model" placeholder="Model">
+	<input type="text" ng-model="newCar.mileage" placeholder="Mileage">
+	<input type="text" ng-model="newCar.year" placeholder="Year">
+	<input type="text" ng-model="newCar.price" placeholder="Price">
+	<button type="submit">submit</button>
+</form>
+
+<ul>
+	<li ui-sref="car({id: car.$id})" ng-repeat="car in cars">
+		make: {{car.make}}
+		model: {{car.model}}
+		year: {{car.year}}
+		mileage: {{car.mileage}}
+		price: {{car.price}}
+	</li>
+</ul>
+
